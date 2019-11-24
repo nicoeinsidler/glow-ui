@@ -1,0 +1,32 @@
+// Defining text, colors and standard HTML elements (h1, ul, ...).
+
+@use 'reset';
+@use 'config';
+
+body {
+    font: 14pt config.$font-main;
+    line-height: 14pt;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 3em;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1.8em;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+// TODO: Should be written into vars
+p {
+    margin-bottom: 12pt;
+}
