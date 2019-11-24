@@ -1,11 +1,11 @@
 * {
-  color: black;
   padding: 0;
   margin: 0;
 }
 
 body {
   font: 14pt "Source Sans Pro", sans-serif;
+  color: #323232;
   line-height: 14pt;
 }
 
@@ -31,7 +31,23 @@ p {
   margin-bottom: 12pt;
 }
 
-body > * {
+dl {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0px 20px 0px;
+}
+dl dt {
+  font-weight: 800;
+  width: 30%;
+}
+dl dd {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+body > article {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -41,10 +57,80 @@ header {
   margin-top: 60px;
 }
 
-.c-box {
-  height: 100px;
-  width: 100px;
-  text-align: center;
+.color-palette {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 20px 0px;
+}
+.color-palette li {
+  height: 120px;
+  width: 120px;
+  list-style: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+.color-palette li::before {
+  content: attr(id) "\a\a";
+}
+
+.color-palette::after {
+  content: "* all colors are written as rgba() values.";
+  color: rgba(0, 0, 0, 0.2);
+}
+
+#c-light-bg {
+  background: white;
+  color: black;
+}
+
+#c-light-txt {
+  background: #323232;
+  color: white;
+}
+
+#c-light-txt-note {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+#c-light-accent {
+  background: black;
+  color: white;
+}
+
+#c-dark-bg {
+  background: #141414;
+  color: white;
+}
+
+#c-dark-txt {
+  background: #c8c8c8;
+  color: black;
+}
+
+#c-dark-txt-note {
+  background: rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+#c-dark-accent {
+  background: white;
+  color: black;
+}
+
+#f-sans {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#f-serif {
+  font-family: "Source Serif Pro", serif;
+}
+
+#f-mono {
+  font-family: "Source Code Pro", monospace;
 }
 
 /*# sourceMappingURL=style.css.map */

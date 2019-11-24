@@ -5,6 +5,7 @@
 
 body {
     font: 14pt config.$font-main;
+    color: config.$c-light-txt;
     line-height: 14pt;
 }
 
@@ -29,4 +30,23 @@ h3 {
 // TODO: Should be written into vars
 p {
     margin-bottom: 12pt;
+}
+
+// LISTS
+dl {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0px 20px 0px;
+
+    dt {
+        font-weight: config.$f-bold;
+        width: 30%;
+    }
+
+    dd {
+        width: 70%;
+        margin-bottom: 10px;
+    }
 }
