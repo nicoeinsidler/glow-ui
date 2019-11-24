@@ -3,10 +3,12 @@
 @use 'typography';
 @use 'colors';
 
+$light-theme: true;
+
 
 //  FONTS
 $font-main: typography.$font-sans;
-
+$f-size: 14pt;
 $f-bold: 800;
 
 
@@ -21,3 +23,20 @@ $c-dark-bg: colors.$darker;
 $c-dark-txt: colors.$light;
 $c-dark-txt-note: rgba(255,255,255,.2);
 $c-dark-accent: white;
+
+
+// COLORS
+@if $light-theme {
+    $c-bg: $c-light-bg;
+    $c-txt: $c-light-txt;
+    $c-txt-note: $c-light-txt-note;
+    $c-accent: $c-light-accent;
+} @else {
+    $c-bg: $c-dark-bg;
+    $c-txt: $c-dark-txt;
+    $c-txt-note: $c-dark-txt-note;
+    $c-accent: $c-dark-accent;
+}
+
+
+$test = $c-bg;

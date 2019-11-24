@@ -1,0 +1,7 @@
+@use 'sass:color';
+
+
+@mixin box($color, $alpha) {
+    background: $color;
+    background: linear-gradient(0deg, color.adjust($color, $lightness: -$alpha) 0%, $color 100%);
+}

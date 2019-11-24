@@ -2,6 +2,8 @@
 @use 'base/config';
 @use 'base/typography';
 
+@use 'modules/buttons';
+
 
 body>article {
     width: 60%;
@@ -58,3 +60,16 @@ header {
 #f-sans {font-family: typography.$font-sans;}
 #f-serif {font-family: typography.$font-serif;}
 #f-mono {font-family: typography.$font-mono;}
+
+
+// SHAPES & BOXES
+.box {
+    border: 1px solid config.$c-light-txt;
+    width: 162px;
+    height: 100px;
+    margin: 20px 10px;
+    padding: 8px;
+}
+#box-round {
+    border-radius: 5px;
+}

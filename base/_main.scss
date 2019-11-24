@@ -4,11 +4,14 @@
 @use 'config';
 
 body {
-    font: 14pt config.$font-main;
+    font: config.$f-size config.$font-main;
     color: config.$c-light-txt;
     line-height: 14pt;
 }
 
+
+
+// HEADINGS
 h1 {
     font-size: 3em;
     font-weight: 100;

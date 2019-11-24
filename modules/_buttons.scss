@@ -1,0 +1,13 @@
+@use '../base/config';
+@use '../base/corners';
+@use '../base/gradients';
+
+$test: config.$c-bg;
+
+button {
+    @include corners.rounded;
+    @include gradients.box(red, 10%);
+    padding: 6px 8px 5px 8px;
+    border: 1px solid rgba(0,0,0,.1);
+    font-size: config.$f-size - 2;
+}
