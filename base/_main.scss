@@ -33,12 +33,12 @@ p {
 }
 
 // LISTS
+ul, ol, dl {margin: 10px 0px 25px 0px;}
 dl {
     width: 100%;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 10px 0px 20px 0px;
 
     dt {
         font-weight: config.$f-bold;
@@ -47,6 +47,14 @@ dl {
 
     dd {
         width: 70%;
+        margin-bottom: 10px;
+    }
+}
+
+ul, ol {
+    padding-left: 50px;
+
+    li {
         margin-bottom: 10px;
     }
 }
