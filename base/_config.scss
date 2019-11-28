@@ -3,7 +3,14 @@
 @use 'typography';
 @use 'colors';
 
-$light-theme: true;
+$light-theme: false;
+
+// DEFAULTS
+// (if reassignment under COLOR SWITCH does not work)
+$c-bg: white;
+$c-txt: black;
+$c-txt-note: grey;
+$c-accent: red;
 
 
 //  FONTS
@@ -25,18 +32,15 @@ $c-dark-txt-note: rgba(255,255,255,.2);
 $c-dark-accent: white;
 
 
-// COLORS
+// COLOR SWITCH
 @if $light-theme {
-    $c-bg: $c-light-bg;
-    $c-txt: $c-light-txt;
-    $c-txt-note: $c-light-txt-note;
-    $c-accent: $c-light-accent;
+    $c-bg: $c-light-bg !global;
+    $c-txt: $c-light-txt !global;
+    $c-txt-note: $c-light-txt-note !global;
+    $c-accent: $c-light-accent !global;
 } @else {
-    $c-bg: $c-dark-bg;
-    $c-txt: $c-dark-txt;
-    $c-txt-note: $c-dark-txt-note;
-    $c-accent: $c-dark-accent;
+    $c-bg: $c-dark-bg !global;
+    $c-txt: $c-dark-txt !global;
+    $c-txt-note: $c-dark-txt-note !global;
+    $c-accent: $c-dark-accent !global;
 }
-
-
-$test = $c-bg;

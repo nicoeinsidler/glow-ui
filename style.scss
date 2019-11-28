@@ -41,7 +41,7 @@ header {
 }
 .color-palette::after {
     content: '* all colors are written as rgba() values.';
-    color: config.$c-light-txt-note;
+    color: config.$c-txt-note;
 }
 
 

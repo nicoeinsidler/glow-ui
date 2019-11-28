@@ -4,8 +4,9 @@
 @use 'config';
 
 body {
+    background: config.$c-bg;
     font: config.$f-size config.$font-main;
-    color: config.$c-light-txt;
+    color: config.$c-txt;
     line-height: 14pt;
 }
 
