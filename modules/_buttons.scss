@@ -2,11 +2,13 @@
 @use '../base/corners';
 @use '../base/gradients';
 
+@use 'sass:color';
+
 
 button {
     @include corners.rounded;
-    @include gradients.box(config.$c-txt, 10%);
+    @include gradients.box(config.$c-box, 10%);
     padding: 6px 8px 5px 8px;
-    border: 1px solid rgba(0,0,0,.1);
+    border: 1px solid color.adjust(config.$c-box, $lightness: -10);
     font-size: config.$f-size - 2;
 }

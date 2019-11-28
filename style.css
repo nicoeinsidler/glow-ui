@@ -4,9 +4,9 @@
 }
 
 body {
-  background: #141414;
+  background: white;
   font: 14pt "Source Sans Pro", sans-serif;
-  color: #c8c8c8;
+  color: #323232;
   line-height: 14pt;
 }
 
@@ -60,10 +60,10 @@ ul li, ol li {
 
 button {
   border-radius: 5px;
-  background: #c8c8c8;
-  background: linear-gradient(0deg, #afafaf 0%, #c8c8c8 100%);
+  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(0deg, rgba(230, 230, 230, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
   padding: 6px 8px 5px 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(230, 230, 230, 0.2);
   font-size: 12pt;
 }
 
@@ -99,7 +99,7 @@ header {
 
 .color-palette::after {
   content: "* all colors are written as rgba() values.";
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(0, 0, 0, 0.2);
 }
 
 #c-light-bg {

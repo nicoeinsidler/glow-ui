@@ -3,7 +3,7 @@
 @use 'typography';
 @use 'colors';
 
-$light-theme: false;
+$light-theme: true;
 
 // DEFAULTS
 // (if reassignment under COLOR SWITCH does not work)
@@ -25,12 +25,14 @@ $c-light-bg: white;
 $c-light-txt: colors.$dark;
 $c-light-txt-note: rgba(0,0,0,.2);
 $c-light-accent: black;
+$c-light-box: rgba(255,255,255,.2);
 
 //  COLORS DARK
 $c-dark-bg: colors.$darker;
 $c-dark-txt: colors.$light;
 $c-dark-txt-note: rgba(255,255,255,.2);
 $c-dark-accent: white;
+$c-dark-box: rgba(255,255,255,.2);
 
 
 // COLOR SWITCH
@@ -39,9 +41,11 @@ $c-dark-accent: white;
     $c-txt: $c-light-txt !global;
     $c-txt-note: $c-light-txt-note !global;
     $c-accent: $c-light-accent !global;
+    $c-box: $c-light-box !global;
 } @else {
     $c-bg: $c-dark-bg !global;
     $c-txt: $c-dark-txt !global;
     $c-txt-note: $c-dark-txt-note !global;
     $c-accent: $c-dark-accent !global;
+    $c-box: $c-dark-box !global;
 }
