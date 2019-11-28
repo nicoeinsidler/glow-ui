@@ -11,6 +11,7 @@ $c-bg: white;
 $c-txt: black;
 $c-txt-note: grey;
 $c-accent: red;
+$c-box: lightgrey;
 
 
 //  FONTS
@@ -19,28 +20,17 @@ $f-size: 14pt;
 $f-bold: 800;
 
 
-// COLORS LIGHT
-$c-light-bg: white;
-$c-light-txt: colors.$dark;
-$c-light-txt-note: rgba(0,0,0,.2);
-$c-light-accent: black;
-
-//  COLORS DARK
-$c-dark-bg: colors.$darker;
-$c-dark-txt: colors.$light;
-$c-dark-txt-note: rgba(255,255,255,.2);
-$c-dark-accent: white;
-
-
 // COLOR SWITCH
 @if $light-theme {
-    $c-bg: $c-light-bg !global;
-    $c-txt: $c-light-txt !global;
-    $c-txt-note: $c-light-txt-note !global;
-    $c-accent: $c-light-accent !global;
+    // COLORS LIGHT
+    $c-bg: white !global;
+    $c-txt: colors.$dark !global;
+    $c-txt-note: rgba(0,0,0,.2) !global;
+    $c-accent: black !global;
 } @else {
-    $c-bg: $c-dark-bg !global;
-    $c-txt: $c-dark-txt !global;
-    $c-txt-note: $c-dark-txt-note !global;
-    $c-accent: $c-dark-accent !global;
+    //  COLORS DARK
+    $c-bg: colors.$darker !global;
+    $c-txt: colors.$light !global;
+    $c-txt-note: rgba(255,255,255,.2) !global;
+    $c-accent: white !global;
 }
