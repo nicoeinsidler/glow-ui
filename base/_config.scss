@@ -3,7 +3,7 @@
 @use 'typography';
 @use 'colors';
 
-$light-theme: true;
+$light-theme: false;
 
 // DEFAULTS
 // (if reassignment under COLOR SWITCH does not work)
@@ -32,7 +32,7 @@ $c-dark-bg: colors.$darker;
 $c-dark-txt: colors.$light;
 $c-dark-txt-note: rgba(255,255,255,.2);
 $c-dark-accent: white;
-$c-dark-box: rgba(255,255,255,.2);
+$c-dark-box: rgb(70, 70, 70);
 
 
 // COLOR SWITCH

@@ -1,0 +1,12 @@
+// This file will include helper functions, especially for decreasing and increasing lightness values for the light and dark theme
+@use 'sass:color';
+@use '../base/config';
+
+@function change_lightness($color, $value, $light-theme: config.$light-theme) {
+    @if $light-theme {
+        $value: $value;
+    } @else {
+        $value: -$value;
+    }
+    @return color.scale($color, $lightness: $value);
+}

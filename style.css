@@ -8,9 +8,9 @@ button:focus {
 }
 
 body {
-  background: white;
+  background: #141414;
   font: 14pt "Source Sans Pro", sans-serif;
-  color: #323232;
+  color: #c8c8c8;
   line-height: 14pt;
 }
 
@@ -64,11 +64,11 @@ ul li, ol li {
 
 button {
   border-radius: 5px;
-  background: whitesmoke;
-  background: linear-gradient(0deg, gainsboro 0%, whitesmoke 100%);
+  background: #464646;
+  background: linear-gradient(0deg, #2d2d2d 0%, #464646 100%);
   padding: 6px 8px 5px 8px;
-  border: 1px solid #d0d0d0;
-  box-shadow: 0px 1px 0px #fafafa inset;
+  border: 1px solid #626262;
+  box-shadow: 0px 1px 0px #232323 inset;
   font-size: 12pt;
 }
 
@@ -104,7 +104,7 @@ header {
 
 .color-palette::after {
   content: "* all colors are written as rgba() values.";
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 #c-light-bg {
@@ -153,7 +153,7 @@ header {
 }
 
 #c-dark-box {
-  background: rgba(255, 255, 255, 0.2);
+  background: #464646;
   color: black;
 }
 
