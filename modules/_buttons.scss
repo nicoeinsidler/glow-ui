@@ -9,6 +9,7 @@ button {
     @include corners.rounded;
     @include gradients.box(config.$c-box, 10%);
     padding: 6px 8px 5px 8px;
-    border: 1px solid color.adjust(config.$c-box, $lightness: -10);
+    border: 1px solid color.scale(config.$c-box, $lightness: -15%);
+    box-shadow: 0px 1px 0px color.scale(config.$c-box, $lightness: 50%) inset;
     font-size: config.$f-size - 2;
 }

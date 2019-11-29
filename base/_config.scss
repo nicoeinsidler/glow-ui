@@ -19,13 +19,13 @@ $font-main: typography.$font-sans;
 $f-size: 14pt;
 $f-bold: 800;
 
-
+// TODO: replace with map()!
 // COLORS LIGHT
 $c-light-bg: white;
 $c-light-txt: colors.$dark;
 $c-light-txt-note: rgba(0,0,0,.2);
 $c-light-accent: black;
-$c-light-box: rgba(255,255,255,.2);
+$c-light-box: rgb(245, 245, 245);
 
 //  COLORS DARK
 $c-dark-bg: colors.$darker;
