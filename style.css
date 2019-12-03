@@ -8,9 +8,9 @@ button:focus {
 }
 
 body {
-  background: white;
+  background: #141414;
   font: 14pt "Source Sans Pro", sans-serif;
-  color: #323232;
+  color: #c8c8c8;
   line-height: 14pt;
 }
 
@@ -63,12 +63,103 @@ ul li, ol li {
 }
 
 button {
+  background: #141414;
+  color: #c8c8c8;
   padding: 6px 8px 5px 8px;
-  border: 2px solid #323232;
+  border: 2px solid #c8c8c8;
   font-size: 12pt;
 }
 button:active {
-  background: whitesmoke;
+  background: #464646;
+}
+button:focus {
+  outline: 0;
+}
+button:disabled {
+  cursor: not-allowed;
+  color: #c8c8c8;
+  opacity: 0.5;
+}
+button[type=reset]::before {
+  content: "settings_backup_restore";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11pt;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+button.save::before {
+  content: "save";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11pt;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+button.delete::before {
+  content: "delete";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 11pt;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+
+input {
+  padding: 6px 8px 5px 8px;
+  border: 2px solid #c8c8c8;
+  font-size: 12pt;
+  background: #141414;
+  color: #c8c8c8;
+}
+input:disabled {
+  cursor: not-allowed;
+  color: #c8c8c8;
+  opacity: 0.5;
+}
+input:focus {
+  outline: 0;
+}
+input[type=color] {
+  -webkit-appearance: none;
+  width: 32px;
+  height: 32px;
+}
+input[type=color]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type=color]::-webkit-color-swatch {
+  border: none;
 }
 
 body > article {
@@ -103,7 +194,7 @@ header {
 
 .color-palette::after {
   content: "* all colors are written as rgba() values.";
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 #c-light-bg {
