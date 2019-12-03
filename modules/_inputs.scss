@@ -10,6 +10,8 @@ input {
     padding: 6px 8px 5px 8px;
     border: 2px solid config.$c-txt;
     font-size: config.$f-size - 2;
+    background: config.$c-bg;
+    color: config.$c-txt;
 
     &:disabled {
         @include mixins.disabled;
