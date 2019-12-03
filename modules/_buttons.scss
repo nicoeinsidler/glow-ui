@@ -14,4 +14,28 @@ button {
     &:active {
         background: config.$c-box;
     }
+
+    &:disabled {
+        cursor: not-allowed;
+        color: config.$c-txt;
+        opacity: 0.5;
+    }
+    &[type="reset"]::before {
+        content: "settings_backup_restore";
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: config.$f-size -3;
+        letter-spacing: normal;
+        text-transform: none;
+        display: inline-block;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        -webkit-font-feature-settings: 'liga';
+        -webkit-font-smoothing: antialiased;
+        position: relative;
+        top: 2px;
+        right: 2px;
+    }
 }
