@@ -1,0 +1,7 @@
+@use 'config';
+
+@mixin disabled {
+    cursor: not-allowed;
+    color: config.$c-txt;
+    opacity: 0.5;
+}
