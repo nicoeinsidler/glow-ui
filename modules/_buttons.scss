@@ -1,7 +1,7 @@
 @use '../base/config';
 @use '../base/corners';
 @use '../base/gradients';
-@use '../base/functions';
+@use '../base/mixins';
 
 @use 'sass:color';
 
@@ -35,10 +35,12 @@ button {
         background: config.$c-box;
     }
 
+    &:focus {
+        outline: 0;
+    }
+
     &:disabled {
-        cursor: not-allowed;
-        color: config.$c-txt;
-        opacity: 0.5;
+        @include mixins.disabled;
     }
     &[type="reset"]::before {
         @include button-icon("settings_backup_restore");
