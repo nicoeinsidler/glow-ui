@@ -1,0 +1,31 @@
+@use '../base/config';
+@use '../base/corners';
+@use '../base/gradients';
+@use '../base/mixins';
+
+@use 'sass:color';
+
+
+input {
+    padding: 6px 8px 5px 8px;
+    border: 2px solid config.$c-txt;
+    font-size: config.$f-size - 2;
+
+    &:disabled {
+        @include mixins.disabled;
+    }
+    &:focus {
+        outline: 0;
+    }
+    &[type="color"] {
+        -webkit-appearance: none;
+        width: 32px;
+        height: 32px;
+    }
+    &[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+    &[type="color"]::-webkit-color-swatch {
+        border: none;
+    }
+}
