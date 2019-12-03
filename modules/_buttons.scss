@@ -7,10 +7,11 @@
 
 
 button {
-    @include corners.rounded;
-    @include gradients.box(config.$c-box, 10%);
     padding: 6px 8px 5px 8px;
-    border: 1px solid functions.change_lightness(config.$c-box, -15%);
-    box-shadow: 0px 1px 0px functions.change_lightness(config.$c-box, 50%, false) inset;
+    border: 2px solid config.$c-txt;
     font-size: config.$f-size - 2;
+
+    &:active {
+        background: config.$c-box;
+    }
 }
