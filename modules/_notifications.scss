@@ -1,14 +1,55 @@
 @use '../base/config';
 @use '../base/mixins';
+@use '../base/functions';
 
+$notification-txt-height: config.$f-size + 4;
 
-.notification, .warning, .error, .success {
-    margin: 10px 0px;
-    @include mixins.box_padding;
-    width: 100%;
+@mixin notification-icon($icon) {
+    content: $icon;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: $notification-txt-height;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    top: 5px;
+    right: 1px;
+    margin-left: 2px;
+    margin-right: 4px;
 }
 
-.notification {background: config.$c-box;}
-.warning {background: config.$c-warning;}
-.success {background: config.$c-success;}
-.error {background: config.$c-error;}
+@mixin add_icon($color, $icon) {
+    background: $color;
+
+    &::before {
+        color: functions.change_lightness($color, 40%);
+        @include notification-icon($icon);
+    }
+}
+
+.notification, .warning, .error, .success {
+    @include mixins.box_padding;
+    padding-bottom: 9px;
+    margin: 10px 0px;
+    width: 100%;
+    line-height: $notification-txt-height;
+}
+
+.warning, .success, .error {
+    @if config.$light-theme {
+        color: config.$c-txt;
+    } @else {
+        color: config.$c-light-txt;
+    }
+}
+.notification {@include add_icon(config.$c-box, "notifications");}
+.warning {@include add_icon(config.$c-warning, "warning");}
+.success {@include add_icon(config.$c-success, "done");}
+.error {@include add_icon(config.$c-error, "error");}
