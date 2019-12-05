@@ -1,0 +1,14 @@
+@use '../base/config';
+@use '../base/mixins';
+
+
+.notification, .warning, .error, .success {
+    margin: 10px 0px;
+    @include mixins.box_padding;
+    width: 100%;
+}
+
+.notification {background: config.$c-box;}
+.warning {background: config.$c-warning;}
+.success {background: config.$c-success;}
+.error {background: config.$c-error;}
