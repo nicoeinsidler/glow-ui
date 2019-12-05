@@ -1,0 +1,21 @@
+@use '../base/config';
+@use '../base/functions';
+@use '../base/mixins';
+
+table {
+    caption {
+        @include mixins.box_padding;
+        color: config.$c-txt-note;
+    }
+    tr {
+        td, th {
+            @include mixins.box_padding;
+        }
+        th {
+            font-weight: config.$f-bold;
+        }
+        &:nth-child(2) td {
+            background: functions.change_lightness(config.$c-bg, -10%, config.$light-theme);
+        }
+    }
+}

@@ -1,16 +1,55 @@
 @use '../base/config';
-@use '../base/corners';
-@use '../base/gradients';
-@use '../base/functions';
+@use '../base/mixins';
 
 @use 'sass:color';
 
 
+@mixin button-icon($icon) {
+    content: $icon;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: config.$f-size - 3;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    top: 2px;
+    right: 2px;
+}
+
+
 button {
-    @include corners.rounded;
-    @include gradients.box(config.$c-box, 10%);
-    padding: 6px 8px 5px 8px;
-    border: 1px solid functions.change_lightness(config.$c-box, -15%);
-    box-shadow: 0px 1px 0px functions.change_lightness(config.$c-box, 50%, false) inset;
+    @include mixins.box_padding;
+    background: config.$c-bg;
+    color: config.$c-txt;
+    border: 2px solid config.$c-txt;
     font-size: config.$f-size - 2;
+
+    &:active {
+        background: config.$c-box;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:disabled {
+        @include mixins.disabled;
+    }
+    &[type="reset"]::before {
+        @include button-icon("settings_backup_restore");
+    }
+    &.save::before {
+        @include button-icon("save");
+    }
+    &.delete::before {
+        @include button-icon("delete")
+    }
+
 }

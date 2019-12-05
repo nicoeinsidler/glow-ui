@@ -1,0 +1,31 @@
+@use '../base/config';
+@use '../base/mixins';
+
+@use 'sass:color';
+
+
+input {
+    @include mixins.box_padding;
+    border: 2px solid config.$c-txt;
+    font-size: config.$f-size - 2;
+    background: config.$c-bg;
+    color: config.$c-txt;
+
+    &:disabled {
+        @include mixins.disabled;
+    }
+    &:focus {
+        outline: 0;
+    }
+    &[type="color"] {
+        -webkit-appearance: none;
+        width: 32px;
+        height: 32px;
+    }
+    &[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+    }
+    &[type="color"]::-webkit-color-swatch {
+        border: none;
+    }
+}
