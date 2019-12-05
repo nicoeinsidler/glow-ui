@@ -29,7 +29,7 @@ $notification-txt-height: config.$f-size + 4;
     background: $color;
 
     &::before {
-        color: functions.change_lightness($color, 40%);
+        color: functions.change_lightness($color, 40%, false);
         @include notification-icon($icon);
     }
 }
