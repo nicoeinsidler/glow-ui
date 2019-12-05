@@ -4,12 +4,16 @@
 
 @use 'modules/buttons';
 @use 'modules/inputs';
+@use 'modules/tables';
+@use 'modules/notifications';
+@use 'modules/windows';
 
 
 body>article {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
 }
 
 header {
@@ -45,6 +49,9 @@ header {
     color: config.$c-txt-note;
 }
 
+.window {
+    margin: 10px 0px;
+}
 
 // COLORS
 #c-light-bg         {background: config.$c-light-bg;        color: black;}
