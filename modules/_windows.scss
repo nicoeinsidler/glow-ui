@@ -1,0 +1,9 @@
+@use '../base/config';
+@use '../base/mixins';
+@use '../base/functions';
+
+.window {
+    padding: 20px;
+    background: config.$c-box;
+    box-shadow: 0px 3px 15px 8px functions.change_lightness(config.$c-bg, -22%, true);
+}
