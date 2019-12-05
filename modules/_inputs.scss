@@ -7,7 +7,7 @@
 
 
 input {
-    padding: 6px 8px 5px 8px;
+    @include mixins.box_padding;
     border: 2px solid config.$c-txt;
     font-size: config.$f-size - 2;
     background: config.$c-bg;
