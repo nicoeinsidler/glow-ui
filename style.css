@@ -162,6 +162,13 @@ input[type=color]::-webkit-color-swatch {
   border: none;
 }
 
+form > label {
+  position: absolute;
+  line-height: 25pt;
+  margin-left: 8px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
 table caption {
   padding: 6px 8px 5px 8px;
   color: rgba(0, 0, 0, 0.2);
@@ -292,6 +299,88 @@ table tr:nth-child(2) td {
   padding: 20px;
   background: whitesmoke;
   box-shadow: 0px 3px 15px 8px #c7c7c7;
+}
+
+#admin-panel {
+  visibility: hidden;
+  color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  right: 24px;
+}
+#admin-panel::before {
+  visibility: visible;
+  content: "settings";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+#admin-panel:active, #admin-panel:focus {
+  color: #323232;
+}
+
+#form-login {
+  max-width: 250px;
+}
+#form-login > input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+#form-login > button[type=submit] {
+  visibility: hidden;
+  position: relative;
+  border: none;
+  background: none;
+  top: -53px;
+  left: 228px;
+}
+#form-login > button[type=submit]::before {
+  visibility: visible;
+  content: "chevron_right";
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas: ". . ." ". login ." ". . admin";
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#admin-panel {
+  grid-area: admin;
+}
+
+#form-login {
+  grid-area: login;
 }
 
 body > article {
