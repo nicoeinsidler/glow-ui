@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=100%, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Glow GUI Components</title>
 </head>
 
@@ -79,12 +80,75 @@
         <h2>Buttons</h2>
 
         <button>Button</button>
+        <button disabled="disabled">Disabled Button</button>
+        <button type="reset">Reset Button</button>
+        <button type="submit">Submit Button</button>
+        <button class="save">Save Button</button>
+        <button class="delete">Delete Button</button>
 
         <h2>Inputs</h2>
 
+        <dl>
+            <dt>input: text</dt>
+            <dd><input type="text" placeholder="placeholder"></dd>
+            <dt>input: color</dt>
+            <dd><input type="color" name="color" id="input-color" value="#00ff00"></dd>
+            <dt>input: email</dt>
+            <dd><input type="email" name="email" id="input-email"></dd>
+            <dt>input: date</dt>
+            <dd><input type="date" name="date" id="input-date"></dd>
+            <dt>input: checkbox</dt>
+            <dd><input type="checkbox" name="checkbox" id="input-checkbox"></dd>
+            <dt>input: datetime</dt>
+            <dd><input type="datetime" name="datetime" id="input-datetime"></dd>
+            <dt>input: file</dt>
+            <dd><input type="file" name="file" id="input-file"></dd>
+            <dt>input: password</dt>
+            <dd><input type="password" name="password" id="input-password"></dd>
+            <dt>input: search</dt>
+            <dd><input type="search" name="search" id="input-search"></dd>
+            <dt>input: submit</dt>
+            <dd><input type="submit" value="submit"></dd>
+            <dt>input: url</dt>
+            <dd><input type="url" name="url" id="input-url"></dd>
+            <dt>input: </dt>
+            <dd><input type="range" name="range" id="input-range"></dd>
+            <dt>input: radio</dt>
+            <dd><input type="radio" name="radio" id="input-radio"></dd>
+        </dl>
+
+        <h2>Tables</h2>
+
+        <table>
+            <caption>Caption</caption>
+            <tr>
+                <th>Table Heading</th>
+                <th>Length</th>
+            </tr>
+            <tr>
+                <td>Some Data</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Second Entry</td>
+                <td>6</td>
+            </tr>
+        </table>
+
         <h2>Notifications</h2>
 
+        <div class="notification">Hey this is a notification! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Esse, consequatur. Expedita cupiditate pariatur fuga amet ea ratione nisi, molestias officiis sint.
+            Molestiae fugit vero esse odit nihil fugiat sint commodi?</div>
+        <div class="warning">This is a warning.</div>
+        <div class="error">Something went wrong and caused an error.</div>
+        <div class="success">Yeah! Success!</div>
+
         <h2>Windows</h2>
+
+        <div class="window">Whenever a window or a pop-up is needed, it should look like this. The background should be
+            muted as well (maybe b/w or blurred).</div>
+
     </article>
 </body>
 

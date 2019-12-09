@@ -3,7 +3,7 @@
 @use 'typography';
 @use 'colors';
 
-$light-theme: false;
+$light-theme: true;
 
 // DEFAULTS
 // (if reassignment under COLOR SWITCH does not work)
@@ -12,7 +12,9 @@ $c-txt: black;
 $c-txt-note: grey;
 $c-accent: red;
 $c-box: lightgrey;
-
+$c-warning: null;
+$c-error: null;
+$c-success: null;
 
 //  FONTS
 $font-main: typography.$font-sans;
@@ -26,6 +28,9 @@ $c-light-txt: colors.$dark;
 $c-light-txt-note: rgba(0,0,0,.2);
 $c-light-accent: black;
 $c-light-box: rgb(245, 245, 245);
+$c-light-warning: colors.$yellow;
+$c-light-error: colors.$red;
+$c-light-success: colors.$green;
 
 //  COLORS DARK
 $c-dark-bg: colors.$darker;
@@ -33,6 +38,9 @@ $c-dark-txt: colors.$light;
 $c-dark-txt-note: rgba(255,255,255,.2);
 $c-dark-accent: white;
 $c-dark-box: rgb(70, 70, 70);
+$c-dark-warning: colors.$yellow;
+$c-dark-error: colors.$red;
+$c-dark-success: colors.$green;
 
 
 // COLOR SWITCH
@@ -42,10 +50,16 @@ $c-dark-box: rgb(70, 70, 70);
     $c-txt-note: $c-light-txt-note !global;
     $c-accent: $c-light-accent !global;
     $c-box: $c-light-box !global;
+    $c-warning: $c-light-warning !global;
+    $c-error: $c-light-error !global;
+    $c-success: $c-light-success !global;
 } @else {
     $c-bg: $c-dark-bg !global;
     $c-txt: $c-dark-txt !global;
     $c-txt-note: $c-dark-txt-note !global;
     $c-accent: $c-dark-accent !global;
     $c-box: $c-dark-box !global;
+    $c-warning: $c-dark-warning !global;
+    $c-error: $c-dark-error !global;
+    $c-success: $c-dark-success !global;
 }
