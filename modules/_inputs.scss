@@ -5,6 +5,7 @@
 
 
 input {
+    // TODO: focussed state
     @include mixins.box_padding;
     border: 2px solid config.$c-txt;
     font-size: config.$f-size - 2;
@@ -29,3 +30,12 @@ input {
         border: none;
     }
 }
+
+
+form>label {
+    position: absolute;
+    line-height: config.$f-size + 11pt;
+    margin-left: 8px;
+    color: config.$c-txt-note;
+}
+// TODO: Find a way to hide the label next to input when input is in focus, and leave it there.
